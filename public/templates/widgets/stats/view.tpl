@@ -1,27 +1,21 @@
-<div class="widget-stats">
-    <div class="forums-stats">
-        <div class="posts"><i class="fa fa-pencil"></i> {stats.posts}</div>
-        <div class="topics"><i class="fa fa-comment-o"></i> {stats.topics}</div>
-        <div class="users"><i class="fa fa-user"></i> {stats.users}</div>
+<div class="panel">
+    <div class="panel-heading"><h2 class="panel-title">Board Statistics</h2></div>
+    <div>
+        <div class="widget-stats">
+            <!-- IF today.length -->
+            <div class="list-title">{onlineTitle} (24 hours)</div>
+
+            <div class="users-today">
+                <!-- BEGIN today -->
+                <span class="user-item"><a href="{relative_path}/user/{today.userslug}">{today.username}</a></span>
+                <!-- END today -->
+            </div>
+            <!-- ENDIF today.length -->
+            <div class="list-title">General Statistics</div>
+
+            <div class="forums-stats">
+                {stats.posts} posts in {stats.topics} topics by {stats.users} users.
+            </div>
+        </div>
     </div>
-
-    <!-- IF online.length -->
-    <div class="list-title">{onlineTitle}</div>
-
-    <div class="users-online">
-        <!-- BEGIN online -->
-        <span class="user-item"><a href="{relative_path}/user/{online.userslug}">{online.username}</a></span>
-        <!-- END online -->
-    </div>
-    <!-- ENDIF online.length -->
-
-    <!-- IF today.length -->
-    <div class="list-title">{visitorsTitle}</div>
-
-    <div class="users-today">
-        <!-- BEGIN today -->
-        <span class="user-item"><a href="{relative_path}/user/{today.userslug}">{today.username}</a></span>
-        <!-- END today -->
-    </div>
-    <!-- ENDIF today.length -->
 </div>

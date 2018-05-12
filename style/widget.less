@@ -1,37 +1,33 @@
 @import "material-color";
 
+.panel {
+
+  .panel-heading {
+    color: black;
+    border-bottom: 2px solid #049ae5;
+  }
+  .panel-title {
+    font-size: 20px;
+  }
+}
+
 .widget-stats {
   .forums-stats {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    padding-bottom: 8px;
-
-    .fa {
-      color: @clr-grey-300;
-    }
-
-    .posts {
-      flex: 0 1 auto;
-      color: @clr-grey-500;
-    }
-
-    .topics {
-      flex: 0 1 auto;
-      color: @clr-grey-500;
-    }
-
-    .users {
-      flex: 0 1 auto;
-      color: @clr-grey-500;
-    }
+    padding: 0 15px;
+    font-size: 12px;
   }
 
   .list-title {
-    margin: 8px 0;
-    color: @clr-grey-600;
+    padding: 10px 15px;
+    font-size: 13px;
+    color: black;
+    background: white;
   }
 
+  .users-today {
+    padding: 0 15px;
+    font-size: 12px;
+  }
   .user-item {
     &:after {
       content: ', ';
